@@ -97,7 +97,7 @@ export default class MainScene extends Phaser.Scene {
     create ()
     {
         // Static text
-        this.add.text(500, 30, "Time", { fontFamily: 'Microsoft Sans Serif', fontSize: '32px', fill: '#000' });
+        this.add.text(200, 30, "Click/Unclick To Lock Dice", { fontFamily: 'Microsoft Sans Serif', fontSize: '32px', fill: '#000' });
 
         // Set 5 dices
         let num_dice = 5;
@@ -143,7 +143,8 @@ export default class MainScene extends Phaser.Scene {
         });
 
         // Timer
-        this.timer_text = this.add.text(500, 70, "00:00:00", { fontFamily: 'Microsoft Sans Serif', fontSize: '32px', fill: '#000' });
+        this.add.text(700, 30, "Time", { fontFamily: 'Microsoft Sans Serif', fontSize: '32px', fill: '#000' });
+        this.timer_text = this.add.text(700, 70, "00:00:00", { fontFamily: 'Microsoft Sans Serif', fontSize: '32px', fill: '#000' });
         this.time_ms = 0;
         this.timer = this.time.addEvent({
             delay: 500, // ms
